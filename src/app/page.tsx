@@ -9,7 +9,7 @@ export default function Home() {
   const [url, setUrl] = useState("");
 
   async function submit() {
-    const res = await fetch(" http://localhost:3000/api/pastes", {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/pastes`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -20,7 +20,6 @@ export default function Home() {
     });
 
     const data = await res.json();
-    console.log("----------------", data);
     setUrl(data.url);
   }
 
