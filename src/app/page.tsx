@@ -46,7 +46,20 @@ export default function Home() {
         />
       </div>
 
-      <button onClick={submit}>Create</button>
+      <button
+  onClick={submit}
+  style={{
+    backgroundColor: "#2563eb",
+    color: "white",
+    padding: "8px 16px",
+    border: "none",
+    borderRadius: "6px",
+    cursor: "pointer",
+  }}
+>
+  Create
+</button>
+
 
       {url && (
         <p>
